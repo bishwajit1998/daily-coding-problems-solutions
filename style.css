@@ -1,0 +1,117 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+#pomodoro-container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Max width for larger screens */
+}
+
+#session-indicator {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #5a5a5a;
+    margin-bottom: 15px;
+}
+
+#timer-display {
+    font-size: 5em; /* Prominent timer display */
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    padding: 10px 0;
+    border-bottom: 2px solid #eee;
+}
+
+#controls button {
+    font-size: 1.1em;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    min-width: 100px; /* Ensure buttons have a decent width */
+}
+
+#start-button {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+#start-button:hover {
+    background-color: #218838;
+}
+
+#pause-button {
+    background-color: #ffc107; /* Yellow */
+    color: #333;
+}
+
+#pause-button:hover {
+    background-color: #e0a800;
+}
+
+#reset-button {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+#reset-button:hover {
+    background-color: #c82333;
+}
+
+#controls button:active {
+    transform: scale(0.98); /* Slight press effect */
+}
+
+#instructions {
+    margin-top: 25px;
+    font-size: 0.9em;
+    color: #6c757d;
+}
+
+/* Basic responsiveness */
+@media (max-width: 480px) {
+    #pomodoro-container {
+        padding: 20px 25px;
+    }
+
+    #session-indicator {
+        font-size: 1.5em;
+    }
+
+    #timer-display {
+        font-size: 4em;
+    }
+
+    #controls button {
+        font-size: 1em;
+        padding: 8px 15px;
+        width: 100%; /* Stack buttons on smaller screens */
+        margin: 8px 0; /* Adjust margin for stacked buttons */
+    }
+
+    #instructions {
+        font-size: 0.85em;
+    }
+}
