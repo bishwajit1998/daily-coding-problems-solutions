@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer Unit Tests</title>
+    <link rel="stylesheet" href="style.css"> <!-- Optional: for consistent styling of results -->
+    <style>
+        #test-results {
+            margin: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        .test-case {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .test-case:last-child {
+            border-bottom: none;
+        }
+        .success {
+            color: green;
+        }
+        .failure {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pomodoro Timer Unit Tests</h1>
+    <div id="test-results">
+        <p>Running tests...</p>
+    </div>
+
+    <!-- Scripts: The code to be tested and the test script itself -->
+    <!-- Important: Load script.js BEFORE tests.js -->
+    <!-- Mocking UI elements script.js might try to access on load -->
+    <div id="pomodoro-container" style="display: none;">
+        <div id="session-indicator">Work Session</div>
+        <div id="timer-display">25:00</div>
+        <div id="controls">
+            <button id="start-button">Start</button>
+            <button id="pause-button">Pause</button>
+            <button id="reset-button">Reset</button>
+        </div>
+    </div>
+    <audio id="work-end-sound" src="sounds/work_end.mp3" preload="auto"></audio>
+    <audio id="break-end-sound" src="sounds/break_end.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+    <script src="tests.js"></script>
+</body>
+</html>
